@@ -1,22 +1,22 @@
 <?php 
 
-	namespace App\Models;
+namespace App\Models;
 
-	class Produto{
+class Produto{
 
-		protected $db;
+	protected $db;
 
-		public function __construct(\PDO $db){
-			$this->db = $db;
-		}
+	public function __construct(\PDO $db){
+		$this->db = $db;
+	}
 
-		public function getProdutos(){
+	public function getProdutos(){
 
-			$query = "SELECT id, descricao, preco FROM tb_produtos";
-			return $this->db->query($query)->fetchAll();
-
-		}
+		$query = "SELECT id, descricao, preco FROM tb_produtos";
+		return $this->db->query($query)->fetchAll();
 
 	}
 
- ?>
+}
+
+?>
